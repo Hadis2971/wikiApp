@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+
+import Wiki from "./components/wiki/wiki";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+   <>
+     <Wiki />
+   </>
   );
 }
 
