@@ -4,13 +4,13 @@ const uuidv1 = require('uuid/v1');
 
 
 const WikiDataList = (props) => {
-    const { data } = props;
+    const { data, classNameUL, classNameLI } = props;
     const keys = Object.keys(data);
     const list = keys.map((k) => {
-        return <li key={uuidv1()}>{<a href={k}>{k}</a>}</li>
+        return <li className={classNameLI} key={uuidv1()}>{<a href={k}>{k}</a>}</li>
     }); 
     return (
-        <ul id="list">{list}</ul>
+        <ul className={classNameUL} id="list">{list}</ul>
     );
 };
 

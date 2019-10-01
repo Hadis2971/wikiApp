@@ -25,8 +25,8 @@ class Wiki extends Component {
         const { queryTerm } = this.state;
         return(
            <div id="wiki-box">
-               <Header title="Wiki Api App"/>
-               <Input 
+               <Header className="display-3" title="Wiki Api App"/>
+               <Input
                 type="text" 
                 value={queryTerm} 
                 changeValueHanler={this.handleInputChange}/>

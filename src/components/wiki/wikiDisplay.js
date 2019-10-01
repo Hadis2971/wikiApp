@@ -75,12 +75,19 @@ class WikiDisplay extends Component {
         return (
             <>
                <Button 
-                title="Click"
-                buttonFunctionality={this.startFetchWikiData}/>
+                 className="btn btn-block btn-primary"
+                 title="Click"
+                 buttonFunctionality={this.startFetchWikiData}/>
                <RenderIf shouldRender={showError}>
-                    <Header title={errorMsg}/>
+                    <Header 
+                     className="display-4"
+                     style={{color: "red"}} 
+                     title={errorMsg}/>
                 </RenderIf>
-                <WikiDataList data={wikidResponseData}/>
+                <WikiDataList
+                  classNameUL="list-group" 
+                  classNameLI="list-group-item"
+                  data={wikidResponseData}/>
             </>
         );
     }
